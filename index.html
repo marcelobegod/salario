@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <h1>Calculando Salários</h1>
+        <p> Valor atual do salário mínimo: R$ 1.212,00.</p>
+        <form action="" method="get" onsubmit="event.preventDefault(); quantisal();">
+        <p>
+            <label for="salario"> Digite quanto você recebe:</label>
+            <input type="number" name="salario" id="salario">
+        <p>
+        <p>
+            <input type="submit" value="Calcular">
+        </p>
+        </form>
+    </main>
+
+    <section>
+        <h2>Quantidade de salários:</h2>
+        <p id="msg">O resultado aparecerá aqui....</p>     
+    </section>
+
+<script>
+    function quantisal()    {
+        let sal = Number(salario.value)
+        let qtsal = Math.floor(sal / 1212)
+        if (sal >= 1212) 
+            {
+            msg.innerHTML = `Você recebe mais de um salário mínimo.<br>`
+        } 
+        else   
+            {
+            msg.innerHTML = `Você recebe menos de um salário mínimo.<br>`
+        }
+        if (sal >= 1212) {
+           msg.innerHTML += `Você recebe um total de ${qtsal} salário(s) mínimo(s).`
+        }
+    }    
+</script>
+
+</body>
+</html>
